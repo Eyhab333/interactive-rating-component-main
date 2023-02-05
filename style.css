@@ -1,0 +1,315 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+/* ########### */
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background: var(--very-dark-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  border-radius: 30px;
+  width: 70%;
+  max-width: 600px;
+}
+
+.rating-state {
+  padding: 32px 39px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.image-star {
+  height: 48px;
+  width: 48px;
+  padding: 16px;
+  border-radius: 50%;
+  background: #262e38;
+  margin-bottom: 30px;
+}
+
+.rating-text h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
+  color: #ffffff;
+  margin-bottom: 7px;
+}
+
+.rating-text p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #969fad;
+  margin-bottom: 24px;
+}
+
+.numbers-container {
+  width: 100%;
+}
+
+.numbers-ul {
+  width: 100%;
+}
+
+ul {
+  width: 100%;
+  height: 51px;
+  width: 341px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 21px;
+}
+
+li {
+  width: 20%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-rating {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding-top: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #7c8798;
+  background: #262E38;
+}
+
+.btn-rating:hover {
+  background: #FC7614;
+  color: white;
+}
+
+.btn-rating:focus {
+  background: #7C8798;
+  color: white;
+}
+
+#submit {
+  width: 100%;
+  margin-top: 32px;
+  background: #ffffff;
+  border-radius: 22.5px;
+  padding: 11px 138px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  background-color: #fc7614;
+  color: white;
+  text-transform: uppercase;
+}
+
+#submit:hover {
+  background-color: white;
+  color: #fc7614;
+}
+
+/*============ Thank you state start ==============*/
+
+
+.thank-you-state {
+  padding: 45px 40px 35px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.img-and-p .thank-you-img {
+  height: 108px;
+  width: 162px;
+  margin: 0 auto;
+}
+
+.img-and-p p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  color: #fc7614;
+  background: #262e38;
+  border-radius: 22.5px;
+  padding: 4px 20px;
+  padding-top: 8px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.text-thank-you {
+  text-align: center;
+}
+
+.text-thank-you h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
+  color: #ffffff;
+  margin-bottom: 7px;
+}
+
+.text-thank-you p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  color: #969fad;
+  max-width: 340px;
+  margin-bottom: 10px;
+}
+
+#rate-again {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 22.5px;
+  padding: 11px 118px;
+  padding-top: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  background: #fc7614;
+  color: white;
+  text-transform: uppercase;
+}
+
+#rate-again:hover {
+  background-color: white;
+  color: #fc7614;
+}
+
+.hidden {
+  display: none;
+}
+/*##### for-phone-only ##########*/
+@media (max-width: 599px) {
+  .container {
+    width: 91%;
+    padding: 22px 19px 22px 24px;
+  }
+}
+
+/*############ for-tablet-portrait-up ##############*/
+@media (min-width: 600px) {
+}
+
+/*############ for-tablet-landscape-up #############*/
+@media (min-width: 900px) {
+}
+
+/*############ for-desktop-up ###########*/
+@media (min-width: 1200px) {
+}
+
+/*############ for-big-desktop-up ##########*/
+@media (min-width: 1800px) {
+}
