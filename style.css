@@ -113,7 +113,7 @@ main {
 }
 
 .rating-state {
-  padding: 32px 39px 32px 32px;
+  padding: 38px 39px 32px 32px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
