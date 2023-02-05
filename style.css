@@ -296,6 +296,10 @@ li {
     width: 91%;
     padding: 22px 19px 22px 24px;
   }
+
+  #submit {
+    padding: 11px;
+  }
 }
 
 /*############ for-tablet-portrait-up ##############*/
